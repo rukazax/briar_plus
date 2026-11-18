@@ -1,39 +1,23 @@
-# Briar
-Briar is a messaging app designed for activists, journalists, and anyone else who needs a safe, easy and robust way to communicate.
+# briar+
 
-Unlike traditional messaging apps, Briar doesn't rely on a central server - messages are synchronized directly between the users' devices. 
+Экспериментальный форк [Briar](https://code.briarproject.org/briar/briar). Цель проекта — добавить приватные голосовые P2P-звонки, конференции, публичные и приватные форумы и опциональную биометрическую разблокировку.
 
-If the Internet's down, Briar can sync via Bluetooth or Wi-Fi, keeping information flowing in a crisis. If the Internet's up, Briar can sync via the Tor network, protecting users and their relationships from surveillance.
+## Состояние 0.2.0-alpha.1
 
-## Download Briar
+В исходниках есть интерфейсы голосовых звонков и Android-прототип, который записывает и тут же воспроизводит звук на том же устройстве. Сетевой вызов, сигнализация, Opus, интерфейс звонка, конференции и биометрия остаются задачами разработки. Публичные и приватные форумы относятся к плану развития поверх существующих возможностей Briar.
 
-[<img src="https://briarproject.org//img/fdroid_badge.png"  width="240">](https://briarproject.org/fdroid)
-[<img src="https://briarproject.org/img/google_play_badge_web_generic.png"  width="240">](https://play.google.com/store/apps/details?id=org.briarproject.briar.android)
+Этот снимок предназначен для разработки. APK, прохождение тестов и работа между устройствами при переносе не проверялись. В снимке сохранён исходный Android application ID Briar, поэтому он требует замены перед распространением собственной сборки.
 
-You can also [download the APK file](https://briarproject.org/apk) directly from
-our site.
+| Где | Что находится |
+| --- | --- |
+| [briar-api](briar-api/src/main/java/org/briarproject/briar/api/plus/voice/) | Интерфейсы, состояния и модели голосовых вызовов |
+| [briar-android](briar-android/src/main/java/org/briarproject/briar/android/plus/voice/) | Android-прототип локальной записи и воспроизведения |
+| [BRIAR_PLUS.md](BRIAR_PLUS.md) | Исходная записка к alpha-версии |
+| [Технический аудит 0.2](docs/audit/BRIAR_PLUS_TECHNICAL_AUDIT.md) | Результаты предыдущего аудита и критерии приёмки |
+| [Дорожная карта](docs/ROADMAP.md) | Последовательность разработки и проверки |
+| [Происхождение и изменения](docs/SOURCE-IMPORT.md) | Архивы, лицензия и перечень изменений |
+| [Upstream README](docs/upstream/README.md) | Оригинальная документация Briar |
 
-## Useful links
-[Project website](https://briarproject.org/)
+## Лицензия
 
-[Source code](https://code.briarproject.org/briar/briar/tree/master)
-
-[User manual](https://briarproject.org/manual/)
-
-[Wiki](https://code.briarproject.org/briar/briar/-/wikis/home)
-
-[Privacy policy](https://briarproject.org/privacy)
-
-## Reproducible builds
-
-We provide [docker images](https://code.briarproject.org/briar/briar-reproducer#briar-reproducer)
-to ease the task of verifying that the published APK binaries
-include nothing but our publicly available source code.
-
-You can either use those images or use them as a blueprint to build your own environment
-for reproduction.
-
-## Donate
-
-[![Donate using Liberapay](https://briarproject.org/img/liberapay.svg)](https://liberapay.com/Briar/donate)   
-Bitcoin and BCH: 1NZCKkUCtJV2U2Y9hDb9uq8S7ksFCFGR6K
+В основе проекта лежит Briar. Применимые условия GNU GPL v3 и исходные уведомления сохранены в [LICENSE.txt](LICENSE.txt) и в самих компонентах. Изменения форка перечислены в [описании импорта](docs/SOURCE-IMPORT.md).
